@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+/* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #00850b;
+  color: #fff;
+  padding: 20px 15px;
+  text-align: center;
+  border-bottom: 3px solid #0056b3;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #f8f9fa;
+}
+
+
+
+/* Seção de Parceiros */
+.partners-section {
+    display: flex;
+    justify-content: center; /* Centraliza os banners horizontalmente */
+    align-items: center;    /* Garante alinhamento vertical */
+    gap: 40px;              /* Aumenta o espaçamento entre os banners */
+    margin: 40px auto;      /* Adiciona espaço acima e abaixo da seção */
+    max-width: 90%;         /* Limita a largura da seção no centro da tela */
+    flex-wrap: wrap;        /* Permite quebra de linha para responsividade */
+}
+
+/* Estilo dos Banners */
+.partner-image {
+    max-width: 100%;         /* Permite que as imagens ocupem o espaço disponível */
+    height: auto;            /* Mantém a proporção das imagens */
+    border-radius: 10px;     /* Bordas arredondadas para estética */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    object-fit: cover;       /* Ajusta o conteúdo dentro do espaço disponível */
+    flex: 1;                 /* Faz as imagens crescerem uniformemente */
+    margin: 0 10px;          /* Adiciona espaçamento interno */
+    color: black;
+}
+
+
+/* Box de Comentários Responsivo */
+.comments-box {
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    padding: 20px;            /* Espaçamento interno */
+    border-radius: 15px;      /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 90%;               /* Ocupa 90% da largura do contêiner */
+    max-width: 800px;         /* Limita a largura máxima */
+    margin: 20px auto;        /* Centraliza a seção */
+}
+
+/* Contêiner do iFrame */
+.iframe-container {
+    position: relative;
+    width: 100%;              /* Ocupa toda a largura do contêiner pai */
+    padding-top: 56.25%;      /* Mantém a proporção de 16:9 para o iFrame */
+    overflow: hidden;         /* Evita vazamento de conteúdo */
+    border-radius: 10px;      /* Bordas arredondadas no iFrame */
+    background-color: #fff;   /* Fundo branco no caso de carregamento */
+}
+
+/* Estilização do iFrame */
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;              /* Ajusta a largura ao contêiner */
+    height: 100%;             /* Ajusta a altura ao contêiner */
+    border: none;             /* Remove bordas */
+}
+
+
+/* Rodapé */
+footer {
+  background-color: #dbdbdb;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  border-top: 3px solid #05a300;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    section {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px 30px;
+        margin-bottom: 70px;
+    }
+    
+    .description p {
+        font-size: 15px;
+    }
+
+    .partners-section {
+      flex-direction: column;
+    }
+  
+    .partner-image {
+      max-width: 100%;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    /* Ajustes para o iFrame responsivo */
+    .iframe-container {
+      padding-top: 75%; /* Ajusta a proporção em telas menores */
+    }
+  
+    .comments-box {
+        height: 950px;
+      padding: 15px; /* Reduz o padding para economizar espaço */
+    }
+  }
+  
+  /* Altura adaptável para iFrames */
+  .iframe-container {
+      position: relative;
+      width: 100%; 
+      height: 900px;           /* Altura flexível */
+      min-height: 300px;      /* Define uma altura mínima */
+      max-height: 100vh;      /* Limita a altura ao tamanho da janela */
+      overflow: auto;         /* Permite rolagem se necessário */
+      border-radius: 10px;    /* Bordas arredondadas */
+  }
+  
+  .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 900px;
+      border: none;
+  }
+  
